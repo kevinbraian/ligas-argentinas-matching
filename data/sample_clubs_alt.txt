@@ -1,0 +1,37 @@
+# Lista alternativa — mismos clubes con variantes de nombre, formato o fuente distinta.
+# El algoritmo debe reconocer que son los mismos equipos.
+
+# ── Separador diferente o faltante ──────────────────────────────────────────
+Deportivo Estrella / Villa Nueva
+At. Norte – Río Grande
+S.D. Poniente (San Martín)
+
+# ── Ciudad en paréntesis en vez de explícita ────────────────────────────────
+Club Belgrano (Ciudad Norte)
+San Lorenzo de Villa del Sur
+Club Racing (Puerto Nuevo)
+
+# ── Solo un paréntesis en vez de dos ────────────────────────────────────────
+9 de Julio (Ciudad Ejemplo)
+Juventud Unida (Santa Rosa)
+
+# ── Paréntesis anidados aplanados ────────────────────────────────────────────
+Cruz del Norte – Zona Sur
+Deportivo del Valle – Valle Inferior
+
+# ── Variante ortográfica del alias ──────────────────────────────────────────
+Ferrocarril Central (Tucumán)
+FF CC Andino (Mendoza)
+
+# ── Variante de tipo de club ─────────────────────────────────────────────────
+Futbol Club Pioneros (Corrientes)
+Football Club Atlántico (MDP)
+
+# ── Número inicial precedido de numeración de lista (debe ignorarse) ─────────
+1. 9 de Julio (Río Cuarto)
+2. 12 de Octubre (Posadas)
+3. 25 de Mayo (San Rafael)
+
+# ── Solo nombre — variante con acento / sin acento ──────────────────────────
+Huracan
+Olimpo

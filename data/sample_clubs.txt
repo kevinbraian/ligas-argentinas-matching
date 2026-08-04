@@ -1,0 +1,37 @@
+# Lista de referencia — clubes de ejemplo (ficticios / genéricos)
+# Diseñados para ejercitar todos los edge cases del parser y el algoritmo de matching.
+
+# ── Separador explícito (–) ──────────────────────────────────────────────────
+Club Deportivo Estrella – Villa Nueva
+Asociación Atlética Norte – Río Grande
+Sociedad Deportiva Poniente – San Martín
+
+# ── Paréntesis simple ────────────────────────────────────────────────────────
+Belgrano (Ciudad Norte)
+San Lorenzo (Villa del Sur)
+Racing (Puerto Nuevo)
+
+# ── Paréntesis doble (el segundo es la ciudad real) ─────────────────────────
+9 de Julio (Ciudad Ejemplo) (Ciudad Ejemplo)
+Juventud Unida (La Pampa) (Santa Rosa)
+
+# ── Paréntesis anidados — edge case complejo ────────────────────────────────
+Cruz del Norte (Bariloche) (Bariloche (Zona Sur))
+Deportivo del Valle (General Roca) (General Roca (Valle Inferior))
+
+# ── Alias de forma (Ferro Carril / Ferrocarril / FFCC) ──────────────────────
+Ferro Carril Central (Tucumán)
+Ferroviario Andino (Mendoza)
+
+# ── Alias de tipo (FC, foot-ball, fútbol club) ───────────────────────────────
+FC Pioneros (Corrientes)
+Foot-Ball Club Atlántico (Mar del Plata)
+
+# ── Número inicial que NO es numeración de lista ────────────────────────────
+9 de Julio (Río Cuarto)
+12 de Octubre (Posadas)
+25 de Mayo (San Rafael)
+
+# ── Solo nombre (sin ciudad) ────────────────────────────────────────────────
+Huracán
+Olimpo
