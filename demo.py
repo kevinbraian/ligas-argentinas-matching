@@ -10,6 +10,15 @@ Usage:
     python demo.py --debug    # show internal scores
 """
 
+import sys
+import io
+
+# Force UTF-8 output on Windows consoles (cp1252 can't render ✅ ═ etc.)
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+else:
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
 import argparse
 from comparar_listas import cargar_lista, comparar, imprimir_resultados
 

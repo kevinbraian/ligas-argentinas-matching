@@ -78,26 +78,41 @@ python comparar_listas.py my_list_a.txt my_list_b.txt --no-interactivo
 ## Expected Demo Output
 
 ```
-══════════════════════════════════════════════════════════════
+════════════════════════════════════════════════════════════
   Argentine Football Club Matching Engine — Demo
-══════════════════════════════════════════════════════════════
-  Reference list  : 20 clubs  (data/sample_clubs.txt)
-  Alternate list  : 20 clubs  (data/sample_clubs_alt.txt)
+════════════════════════════════════════════════════════════
+  Reference list  : 19 clubs  (data/sample_clubs.txt)
+  Alternate list  : 19 clubs  (data/sample_clubs_alt.txt)
 
   The same clubs appear with different names, formats,
   and spelling across different sources. The engine
   reconciles them automatically.
 
-══════════════════════════════════════════════════════════════
-  ✅  MATCHES  (18)
-══════════════════════════════════════════════════════════════
-  ...
+════════════════════════════════════════════════════════════
+  ✅  MATCHES  (16)
+════════════════════════════════════════════════════════════
+  REFERENCE                           → ALTERNATE
+  ─────────────────────────────────────────────────────────
+     Asociación Atlética Norte        → At. Norte
+     Belgrano (ciudad norte)          → Club Belgrano (ciudad norte)
+     Club Deportivo Estrella          → Deportivo Estrella
+     Cruz del Norte (zona sur)        → Cruz del Norte – Zona Sur
+     FC Pioneros (corrientes)         → Futbol Club Pioneros (corrientes)
+     Ferro Carril Central (tucuman)   → Ferrocarril Central (tucuman)
+     Ferroviario Andino (mendoza)     → FF CC Andino (mendoza)
+     Foot-Ball Club Atlántico (mdp)   → Football Club Atlántico (Mar del Plata)
+     ...
+
+════════════════════════════════════════════════════════════
   📊  SUMMARY
-  Automatic matches    : 18
+════════════════════════════════════════════════════════════
+  Automatic matches    : 16
   Manual matches       : 0
-  Only in REFERENCE    : 2
-  Only in ALTERNATE    : 2
+  Only in REFERENCE    : 3
+  Only in ALTERNATE    : 3
 ```
+
+> The 3 unmatched clubs illustrate intentional edge cases: `Huracán` vs `Huracan` (accent-only difference scores below the automatic threshold) and `San Lorenzo (villa del sur)` vs `San Lorenzo de Villa del Sur` (preposition changes the structure). In the real workflow these would be resolved in interactive mode.
 
 ## Repository Structure
 
