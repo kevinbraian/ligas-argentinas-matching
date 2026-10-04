@@ -20,7 +20,7 @@ Output (console):
     ➕  Only in B (no equivalent in A)
 
 Built for the Ligas Argentinas project:
-    https://argentinaleagues.web.app/
+    https://ligasargentinas.com.ar/
 """
 
 import sys
@@ -66,6 +66,7 @@ ALIAS = {
 # ══════════════════════════════════════════════════════════
 ALIAS_CIUDADES = {
     'mdp':  'mar del plata',
+    'sde':  'santiago del estero',
     'caba': 'buenos aires',
     # Add more abbreviations as needed
 }
@@ -176,9 +177,9 @@ def parsear_linea(linea):
            "Cruz del Sur (Bariloche) (Bariloche (Zone))"  → name="Cruz del Sur (Bariloche)", city="zone"
       3. Name only
     """
-    # Strip leading numbering ONLY if followed by period/parenthesis + uppercase letter.
+    # Strip leading numbering ONLY if followed by period/parenthesis/bracket + uppercase letter.
     # This ensures "9 de Julio" and "12 de Octubre" keep their initial number.
-    linea = re.sub(r'^\d+[\.)]\s+', '', linea).strip()   # "95. Name" or "95) Name"
+    linea = re.sub(r'^\d+[\.)\]]\s+', '', linea).strip()   # "95. Name", "95) Name" or "95] Name"
     linea = re.sub(r'^\d+\s*[-\u2013]\s+(?=[A-ZÁÉÍÓÚÑ])', '', linea).strip()  # "95 - Name" but not "9 de Julio"
     if not linea:
         return None, None
